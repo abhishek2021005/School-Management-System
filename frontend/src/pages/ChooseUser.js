@@ -79,6 +79,7 @@ const ChooseUser = ({ visitor }) => {
     <StyledContainer>
       <Container>
         <Grid container spacing={2} justifyContent="center">
+          {/* First set of Grid items */}
           <Grid item xs={12} sm={6} md={4}>
             <div onClick={() => navigateHandler("Admin")}>
               <StyledPaper elevation={3}>
@@ -87,10 +88,7 @@ const ChooseUser = ({ visitor }) => {
                 </Box>
                 <StyledTypography>Admin</StyledTypography>
                 Login as an administrator to access the dashboard to manage app
-                data.Demo account:
-                Email: ptu@gmail.com
-                Password: 123456
-                  
+                data.
               </StyledPaper>
             </div>
           </Grid>
@@ -117,8 +115,48 @@ const ChooseUser = ({ visitor }) => {
               </div>
             </StyledPaper>
           </Grid>
+
+          {/* Second set of Grid items (copied from the first set) */}
+          <Grid item xs={12} sm={6} md={4}>
+            <div onClick={() => navigateHandler("Admin")}>
+              <StyledPaper elevation={3}>
+                <Box mb={2}>
+                  <AccountCircle fontSize="large" />
+                </Box>
+                <StyledTypography>Admin Demo Account</StyledTypography>
+                <strong>Email:</strong> ptu@gmail.com {"\n"}
+                <strong>Password:</strong> 123456
+              </StyledPaper>
+            </div>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <StyledPaper elevation={3}>
+              <div onClick={() => navigateHandler("Student")}>
+                <Box mb={2}>
+                  <School fontSize="large" />
+                </Box>
+                <StyledTypography>Student Demo Account</StyledTypography>
+                <strong>Roll Number:</strong> 123
+                <strong> Name:</strong> Abhishek {"\n"}
+                <strong>Password:</strong> 123456
+              </div>
+            </StyledPaper>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <StyledPaper elevation={3}>
+              <div onClick={() => navigateHandler("Teacher")}>
+                <Box mb={2}>
+                  <Group fontSize="large" />
+                </Box>
+                <StyledTypography>Teacher Demo Account</StyledTypography>
+                <strong>Email:</strong> skp@gmail.com {"\n"}
+                <strong>Password:</strong> 123456
+              </div>
+            </StyledPaper>
+          </Grid>
         </Grid>
       </Container>
+
       <Backdrop
         sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open={loader}
