@@ -15,12 +15,13 @@ dotenv.config();
 
 app.use(express.json({ limit: "10mb" }));
 // app.use(cors());
-app.use(cors({
-  // origin: 'https://school-management-system-n8h8xx5dn-abhishek2021005s-projects.vercel.app',
- origin: 'https://school-management-system-git-main-abhishek2021005s-projects.vercel.app/',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-}));
+app.use(cors());
+// app.use(cors({
+//   // origin: 'https://school-management-system-n8h8xx5dn-abhishek2021005s-projects.vercel.app',
+//  origin: 'https://school-management-system-git-main-abhishek2021005s-projects.vercel.app/',
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//   allowedHeaders: ['Content-Type', 'Authorization'],
+// }));
 
 mongoose
   .connect(process.env.MONGO_URL, {
