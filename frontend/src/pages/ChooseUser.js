@@ -87,7 +87,10 @@ const ChooseUser = ({ visitor }) => {
                 </Box>
                 <StyledTypography>Admin</StyledTypography>
                 Login as an administrator to access the dashboard to manage app
-                data.
+                data.Demo account:
+                Email: ptu@gmail.com
+                Password: 123456
+                  
               </StyledPaper>
             </div>
           </Grid>
